@@ -12,6 +12,16 @@ Page({
       url: '../logs/logs'
     })
   },
+  singleSelection:function(){
+    wx.navigateTo({
+      url: '../singleselection/singleselection'
+    })
+  },
+  multiSelection: function () {
+    wx.navigateTo({
+      url: '../multiselection/multiselection'
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -23,4 +33,5 @@ Page({
       })
     })
   }
+  
 })
