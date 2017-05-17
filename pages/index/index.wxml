@@ -1,9 +1,25 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="typecontainer">
-    <view class="typebtn">单选</view>
+
+<view class="page">
+  <!--页头-->
+  <view class="page__hd">
+
   </view>
-  <view class="typecontainer">
-    <view class="typebtn">多选</view>
+  <!--主体-->
+  <view class="page__bd">
+    <view class="typebtn">
+      <button type="default" bindtap="singleSelection" class="blue"> 单选投票 </button>
+    </view>
+    <view class="typebtn">
+      <button type="default" bindtap="multiSelection" class="blue"> 多选投票 </button>
+    </view>
+  </view>
+  
+  <!--页脚-->
+  <view class="weui-footer">
+    <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">XX</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © CarnivalO&NutLee</view>
   </view>
 </view>
