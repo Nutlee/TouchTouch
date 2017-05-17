@@ -1,1 +1,11 @@
 /* multiselection.wxss */
+
+.date {
+  border-bottom: 1px solid #ccc;
+  width: 100rpx;
+}
+.time {
+  width: 50rpx;
+  border-bottom: 1px solid #ccc;
+  margin-left: 20rpx;
+}
