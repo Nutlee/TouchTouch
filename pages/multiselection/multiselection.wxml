@@ -1,2 +1,40 @@
 <!--multiselection.wxml-->
-<text>multiselection.wxml</text>
+<view>
+  <input class="weui-input" placeholder="投票标题"/>
+  <input class="weui-input" placeholder="补充描述选填"/>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell"  wx:for="{{options}}" wx:key="{{index}}">
+        <view class="weui-cell__hd" data-index="{{index}}" bindtap="removeOption">
+            <icon type="cancel"/>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="选项" value="{{item}}"/>
+        </view>
+    </view>
+    <view bindtap="addOptions">+ 添加选项</view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">匿名投票</view>
+          <view class="weui-cell__ft">
+              <switch checked="{{isNoName}}" />
+          </view>
+      </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+          <view class="weui-label">截至日期</view>
+      </view>
+      <view class="weui-cell__bd date">
+          <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+              <view class="weui-input">{{date}}</view>
+          </picker>
+      </view>
+      <view class="weui-cell__bd time">
+          <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+              <view class="weui-input">{{time}}</view>
+          </picker>
+      </view>
+  </view>
+  <button class="weui-btn" type="default" plain="true" bindtap="submitData">按钮</button>
+</view>

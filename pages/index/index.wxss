@@ -1,4 +1,7 @@
 /**index.wxss**/
+.page {
+  height: 100%;
+}
 .typecontainer {
   height: 50%;
   width: 100%;
@@ -13,4 +16,7 @@
   height: 100%;
   width: 100%;
   border: 1px solid #ddd;
+}
+.btn {
+  margin-bottom: 40rpx;
 }
